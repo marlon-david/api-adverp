@@ -149,6 +149,8 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
         LucaDegasperi\OAuth2Server\OAuth2ServerServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Firebird\FirebirdServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -157,6 +159,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        App\Providers\AppRepositoryProvider::class,
 
     ],
 

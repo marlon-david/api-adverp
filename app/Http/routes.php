@@ -18,3 +18,9 @@ Route::get('/', function () {
 Route::post('oauth/access_token', function() {
     return Response::json(Authorizer::issueAccessToken());
 });
+
+Route::group(['middleware' => 'oauth'], function() {
+
+	Route::resource('produto', 'ProdutoController', ['except' => ['create', 'edit']]);
+
+});

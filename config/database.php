@@ -78,6 +78,15 @@ return [
             'schema' => 'public',
         ],
 
+        'firebird' => [
+            'driver' => 'firebird',
+            'host' => env('FIREBIRD_DB_HOST', 'localhost'),
+            'database' => env('FIREBIRD_DB_DATABASE', 'forge'),
+            'username' => env('FIREBIRD_DB_USERNAME', 'forge'),
+            'password' => env('FIREBIRD_DB_PASSWORD', ''),
+            'charset' => 'utf8',
+        ],
+
     ],
 
     /*

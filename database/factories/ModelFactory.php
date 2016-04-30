@@ -19,3 +19,14 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+/*
+factory(App\User::class)->create([
+    'name' => 'Marlon',
+    'email' => 'marlon_dg_oliveira@outlook.com',
+    'password' => bcrypt('teste'),
+    'remember_token' => str_random(10),
+]);
+
+DB::insert('insert into oauth_clients (id,secret,name) values (?,?,?)', ['app1', 'teste', 'Meu app']);
+*/
