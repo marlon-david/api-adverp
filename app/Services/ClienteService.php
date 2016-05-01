@@ -40,7 +40,7 @@ class ClienteService
 	public function find($id)
 	{
 		try {
-			return $this->repository->find($id);
+			return $this->repository->find($id)->getAttributes();
 		} catch (Exception $e) {
 			return response([
 				'error' => true,

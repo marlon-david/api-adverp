@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Repositories\ClienteRepository;
 use App\Services\ClienteService;
+use App\Entities\Cliente;
 
 class ClienteController extends Controller
 {
@@ -54,7 +55,6 @@ class ClienteController extends Controller
      */
     public function show($id)
     {
-        //dd($this->service->find($id));
         return $this->service->find($id);
     }
 

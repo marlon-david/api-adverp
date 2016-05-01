@@ -84,7 +84,7 @@ return [
             'database' => env('FIREBIRD_DB_DATABASE', 'forge'),
             'username' => env('FIREBIRD_DB_USERNAME', 'forge'),
             'password' => env('FIREBIRD_DB_PASSWORD', ''),
-            'charset' => 'utf8',
+            'charset' => 'UTF8',
         ],
 
     ],
