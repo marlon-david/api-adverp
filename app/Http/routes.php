@@ -22,5 +22,6 @@ Route::post('oauth/access_token', function() {
 Route::group(['middleware' => 'oauth'], function() {
 
 	Route::resource('produto', 'ProdutoController', ['except' => ['create', 'edit']]);
+	Route::resource('cliente', 'ClienteController', ['except' => ['create', 'edit']]);
 
 });
