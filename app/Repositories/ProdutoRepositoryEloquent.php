@@ -2,8 +2,6 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Repositories\ProdutoRepository;
 use App\Entities\Produto;
 use App\Validators\ProdutoRepositoryValidator;
@@ -14,6 +12,7 @@ use App\Validators\ProdutoRepositoryValidator;
  */
 class ProdutoRepositoryEloquent extends BaseRepository implements ProdutoRepository
 {
+    protected $modelClass = Produto::class;
     /**
      * Specify Model class name
      *
@@ -23,8 +22,6 @@ class ProdutoRepositoryEloquent extends BaseRepository implements ProdutoReposit
     {
         return Produto::class;
     }
-
-    
 
     /**
      * Boot up the repository, pushing criteria

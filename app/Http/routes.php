@@ -23,5 +23,6 @@ Route::group(['middleware' => 'oauth'], function() {
 
 	Route::resource('produto', 'ProdutoController', ['except' => ['create', 'edit']]);
 	Route::resource('cliente', 'ClienteController', ['except' => ['create', 'edit']]);
+	Route::resource('os', 'OsController', ['except' => ['create', 'edit']]);
 
 });

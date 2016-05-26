@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Entities;
+
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
+
+class Nfiten extends FirebirdModel implements Transformable
+{
+	use TransformableTrait;
+
+	protected $fillable = ['AUXNFITENS', 'TOTALITEN', 'NUMITEM', 'CODOS', 'CODPRO', 'NUMORDEM', 'INCIDE', 'ISENTO', 'PROSER', 'UN', 'CF', 'CST', 'CFOP', 'CODIGO', 'CFISCALCOMP', 'DESCRICAO', 'QTDE', 'ICMS', 'ALIQIPI', 'ALIQISS', 'DESCONTO', 'VALORIPI', 'UNITARIO', 'VLRICMSSUB', 'ALIQ_SUBST', 'SUBTOTICMS', 'DESCONTOPCT', 'ICMS_INT_UF', 'CODCFOP', 'VLRPIS', 'ALIQPIS', 'ALIQCOFINS', 'VLRCOFINS', 'PREDBC', 'PREDBCST', 'VLRBASECALCIMP', 'VLRDESPADUANEIRAS', 'VLRIMPOSTOIMP', 'VLRIOF', 'MODBC', 'MODBCST', 'PESO', 'ALIQISUBORI', 'PESOTOT', 'VLTOTCFRETE', 'NCM', 'BCIPI', 'BCPIS', 'BCCOFINS', 'BASECALCSTRET', 'VLRICMSSTRET', 'BASECALCICMS', 'BASECALCICMSST', 'FRETE', 'CSOSN', 'OUTRASDESP', 'ICMSDESONERACAO', 'CSTPIS', 'CSTCOFINS', 'TOTAL', 'CSTIPI', 'VTOTTRIB', 'VLRICMSDESON', 'NUMPEDCOMP', 'OBS', 'VLRICMSOP', 'PCTDIFERIMENTO', 'VLRICMSDIFERIDO', 'NUMITEMOS'];
+
+	protected $table = 'NFITENS';
+
+	protected $primaryKey = 'CODNF';
+
+}

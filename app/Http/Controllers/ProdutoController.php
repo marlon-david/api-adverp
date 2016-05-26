@@ -33,7 +33,7 @@ class ProdutoController extends Controller
 	 */
 	public function index()
 	{
-		return $this->repository->paginate(10);
+		return $this->repository->all();
 	}
 
 	/**

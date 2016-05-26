@@ -8,7 +8,8 @@ class ProdutoValidator extends LaravelValidator
 {
 
 	protected $rules = [
-		'nome' => 'required:max:255'
+		'DESCRICAO' => 'required:max:160',
+		'PRECOVENDA' => 'numeric'
 	];
 
 }

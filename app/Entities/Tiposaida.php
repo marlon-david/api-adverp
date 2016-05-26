@@ -1,0 +1,18 @@
+<?php
+
+namespace App\Entities;
+
+use Prettus\Repository\Contracts\Transformable;
+use Prettus\Repository\Traits\TransformableTrait;
+
+class Tiposaida extends FirebirdModel implements Transformable
+{
+	use TransformableTrait;
+
+	protected $fillable = ['AUXTIPOSAIDAS', 'CODUSUALT', 'CODUSUCRIA', 'ISATACADO', 'USARCUSTO2', 'QTDENEGATIVA', 'OSPRECOPADRAO', 'NAOOBRIGAPLACA', 'DATAALT', 'DATACRIA', 'TIPOSAIDA', 'COMIESP', 'COMIPCTPRO', 'COMIPCTSER', 'COMIPCTTER', 'NAOALTERAESTOQUE', 'NAOGERAFINAN', 'NAOASSOCIAORCVND', 'ISFATURAMENTO', 'CODSTATUS', 'CADINATIVO', 'ISBENEFICIAMENTO', 'ISLOTE', 'ISNAOINCPROD', 'ISNAOALTPROD', 'ISBONIFICA', 'NAOGERAFINAEXPED', 'CODLOJA', 'ISVENDA', 'IGNORASITTRIBCALCDIM', 'ISMOSTRAAFV', 'CALCICMS', 'ALTESTFISICO', 'CODTIPOSAIEXP', 'ISDEVOLUCAO', 'CODTIPONF', 'ABREV', 'CALCIPI'];
+
+	protected $table = 'TIPOSAIDAS';
+
+	protected $primaryKey = 'CODTIPOSAI';
+
+}

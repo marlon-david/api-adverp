@@ -3,6 +3,7 @@
 namespace App\Entities;
 
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 abstract class FirebirdModel extends Model
 {
