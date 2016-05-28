@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Cstipi;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class CstipiRepository
  * @package namespace App\Repositories;
  */
-class CstipiRepository extends BaseRepository implements RepositoryInterface
+class CstipiRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Cstipi::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Cstipi::class;
+
 }

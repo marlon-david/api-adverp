@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Ositenssertempo;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class OsitenssertempoRepository
  * @package namespace App\Repositories;
  */
-class OsitenssertempoRepository extends BaseRepository implements RepositoryInterface
+class OsitenssertempoRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Ositenssertempo::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Ositenssertempo::class;
+
 }

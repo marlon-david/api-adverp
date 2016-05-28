@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Tipospag;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class TipospagRepository
  * @package namespace App\Repositories;
  */
-class TipospagRepository extends BaseRepository implements RepositoryInterface
+class TipospagRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Tipospag::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Tipospag::class;
+
 }

@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Mdfepercurso;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class MdfepercursoRepository
  * @package namespace App\Repositories;
  */
-class MdfepercursoRepository extends BaseRepository implements RepositoryInterface
+class MdfepercursoRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Mdfepercurso::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Mdfepercurso::class;
+
 }

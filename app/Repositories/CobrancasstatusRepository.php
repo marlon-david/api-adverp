@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Cobrancasstatus;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class CobrancasstatusRepository
  * @package namespace App\Repositories;
  */
-class CobrancasstatusRepository extends BaseRepository implements RepositoryInterface
+class CobrancasstatusRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Cobrancasstatus::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Cobrancasstatus::class;
+
 }

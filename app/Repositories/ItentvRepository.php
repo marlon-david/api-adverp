@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Itentv;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class ItentvRepository
  * @package namespace App\Repositories;
  */
-class ItentvRepository extends BaseRepository implements RepositoryInterface
+class ItentvRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Itentv::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Itentv::class;
+
 }

@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Agraf;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class AgrafRepository
  * @package namespace App\Repositories;
  */
-class AgrafRepository extends BaseRepository implements RepositoryInterface
+class AgrafRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Agraf::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Agraf::class;
+
 }

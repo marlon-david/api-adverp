@@ -2,12 +2,14 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Contracts\RepositoryInterface;
+use App\Entities\Produto;
+use App\Validators\ProdutoRepositoryValidator;
 
 /**
- * Interface ProdutoRepository
+ * Class ProdutoRepository
  * @package namespace App\Repositories;
  */
-interface ProdutoRepository
+class ProdutoRepository extends BaseRepository
 {
+    protected $modelClass = Produto::class;
 }

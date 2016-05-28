@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Tipoentrada;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class TipoentradaRepository
  * @package namespace App\Repositories;
  */
-class TipoentradaRepository extends BaseRepository implements RepositoryInterface
+class TipoentradaRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Tipoentrada::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Tipoentrada::class;
+
 }

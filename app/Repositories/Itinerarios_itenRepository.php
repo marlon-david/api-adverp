@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Itinerarios_iten;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class Itinerarios_itenRepository
  * @package namespace App\Repositories;
  */
-class Itinerarios_itenRepository extends BaseRepository implements RepositoryInterface
+class Itinerarios_itenRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Itinerarios_iten::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Itinerarios_iten::class;
+
 }

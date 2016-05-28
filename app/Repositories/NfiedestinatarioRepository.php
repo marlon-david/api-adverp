@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Nfiedestinatario;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class NfiedestinatarioRepository
  * @package namespace App\Repositories;
  */
-class NfiedestinatarioRepository extends BaseRepository implements RepositoryInterface
+class NfiedestinatarioRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Nfiedestinatario::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Nfiedestinatario::class;
+
 }

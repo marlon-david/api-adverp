@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Osaberta;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class OsabertaRepository
  * @package namespace App\Repositories;
  */
-class OsabertaRepository extends BaseRepository implements RepositoryInterface
+class OsabertaRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Osaberta::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Osaberta::class;
+
 }

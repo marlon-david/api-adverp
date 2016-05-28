@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Proser_totvendame;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class Proser_totvendameRepository
  * @package namespace App\Repositories;
  */
-class Proser_totvendameRepository extends BaseRepository implements RepositoryInterface
+class Proser_totvendameRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Proser_totvendame::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Proser_totvendame::class;
+
 }

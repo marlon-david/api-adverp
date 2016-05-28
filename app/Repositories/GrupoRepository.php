@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Grupo;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class GrupoRepository
  * @package namespace App\Repositories;
  */
-class GrupoRepository extends BaseRepository implements RepositoryInterface
+class GrupoRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Grupo::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Grupo::class;
+
 }

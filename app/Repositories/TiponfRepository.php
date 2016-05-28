@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Tiponf;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class TiponfRepository
  * @package namespace App\Repositories;
  */
-class TiponfRepository extends BaseRepository implements RepositoryInterface
+class TiponfRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Tiponf::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Tiponf::class;
+
 }

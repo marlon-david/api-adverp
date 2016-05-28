@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Lojasmeta;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class LojasmetaRepository
  * @package namespace App\Repositories;
  */
-class LojasmetaRepository extends BaseRepository implements RepositoryInterface
+class LojasmetaRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Lojasmeta::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Lojasmeta::class;
+
 }

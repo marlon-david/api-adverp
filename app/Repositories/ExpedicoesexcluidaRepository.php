@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Expedicoesexcluida;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class ExpedicoesexcluidaRepository
  * @package namespace App\Repositories;
  */
-class ExpedicoesexcluidaRepository extends BaseRepository implements RepositoryInterface
+class ExpedicoesexcluidaRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Expedicoesexcluida::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Expedicoesexcluida::class;
+
 }

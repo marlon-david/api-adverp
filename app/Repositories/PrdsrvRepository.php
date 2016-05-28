@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Prdsrv;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class PrdsrvRepository
  * @package namespace App\Repositories;
  */
-class PrdsrvRepository extends BaseRepository implements RepositoryInterface
+class PrdsrvRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Prdsrv::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Prdsrv::class;
+
 }

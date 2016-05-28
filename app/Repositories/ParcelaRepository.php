@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Parcela;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class ParcelaRepository
  * @package namespace App\Repositories;
  */
-class ParcelaRepository extends BaseRepository implements RepositoryInterface
+class ParcelaRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Parcela::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Parcela::class;
+
 }

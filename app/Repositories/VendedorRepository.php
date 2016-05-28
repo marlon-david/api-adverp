@@ -2,32 +2,16 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Vendedor;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class VendedorRepository
  * @package namespace App\Repositories;
  */
-class VendedorRepository extends BaseRepository implements RepositoryInterface
+class VendedorRepository extends BaseRepository
 {
 	/**
-	 * Specify Model class name
-	 *
-	 * @return string
+	 * @var string
 	 */
-	public function model()
-	{
-		return Vendedor::class;
-	}
-
-	/**
-	 * Boot up the repository, pushing criteria
-	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Vendedor::class;
 }

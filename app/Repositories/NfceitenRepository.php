@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Nfceiten;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class NfceitenRepository
  * @package namespace App\Repositories;
  */
-class NfceitenRepository extends BaseRepository implements RepositoryInterface
+class NfceitenRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Nfceiten::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Nfceiten::class;
+
 }

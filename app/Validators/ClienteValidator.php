@@ -15,7 +15,7 @@ class ClienteValidator extends LaravelValidator
 		'CODFORMA' => 'exists:firebird.FORMAS,CODFORMA',
 		'CODSEGMENTO' => 'exists:firebird.SEGMENTOS,CODSEGMENTO',
 		'CODCLISTATUS' => 'exists:firebird.CLISTATUS,CODCLISTATUS',
-		'CODRODTABELA' => 'exists:firebird.RODTABELAS,CODRODTABELA',
+		'CODPRODTABELA' => 'exists:firebird.PRODTABELAS,CODPRODTABELA',
 		'CODREGIAO' => 'exists:firebird.REGIOES,CODREGIAO',
 		'CODCIDNFE' => 'exists:firebird.CIDADESNFE,CODCID',
 		'CODTIPOPAG' => 'exists:firebird.TIPOSPAG,CODTIPOPAG',

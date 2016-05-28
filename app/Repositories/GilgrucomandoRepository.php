@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Gilgrucomando;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class GilgrucomandoRepository
  * @package namespace App\Repositories;
  */
-class GilgrucomandoRepository extends BaseRepository implements RepositoryInterface
+class GilgrucomandoRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Gilgrucomando::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Gilgrucomando::class;
+
 }

@@ -2,32 +2,18 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Mapcli;
-use Prettus\Repository\Contracts\RepositoryInterface;
 
 /**
  * Class MapcliRepository
  * @package namespace App\Repositories;
  */
-class MapcliRepository extends BaseRepository implements RepositoryInterface
+class MapcliRepository extends BaseRepository
 {
-	/**
-	 * Specify Model class name
-	 *
-	 * @return string
-	 */
-	public function model()
-	{
-		return Mapcli::class;
-	}
 
 	/**
-	 * Boot up the repository, pushing criteria
+	 * @var string
 	 */
-	public function boot()
-	{
-		$this->pushCriteria(app(RequestCriteria::class));
-	}
+	protected $modelClass = Mapcli::class;
+
 }
