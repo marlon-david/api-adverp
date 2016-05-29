@@ -31,5 +31,7 @@ Route::group(['middleware' => 'oauth'], function() {
 	Route::resource('grupo', 'GrupoController', ['except' => ['create', 'edit']]);
 	Route::resource('subgrupo', 'SubgrupoController', ['except' => ['create', 'edit']]);
 	Route::resource('marca', 'MarcaController', ['except' => ['create', 'edit']]);
+	Route::resource('transportadora', 'TransportadoraController', ['except' => ['create', 'edit']]);
+	Route::resource('vendedor', 'VendedorController', ['except' => ['create', 'edit']]);
 
 });
