@@ -2,18 +2,18 @@
 
 namespace App\Repositories;
 
-use App\Entities\Prodtabsformula;
+use App\Entities\ProdTabFormula;
 
 /**
- * Class ProdtabsformulaRepository
+ * Class ProdTabFormulaRepository
  * @package namespace App\Repositories;
  */
-class ProdtabsformulaRepository extends BaseRepository
+class ProdTabFormulaRepository extends BaseRepository
 {
 
 	/**
 	 * @var string
 	 */
-	protected $modelClass = Prodtabsformula::class;
+	protected $modelClass = ProdTabFormula::class;
 
 }

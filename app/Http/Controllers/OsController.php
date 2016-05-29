@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Services\OsService;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Repositories\OsRepository;
-use App\Entities\Os;
 
 class OsController extends Controller
 {
@@ -13,10 +13,15 @@ class OsController extends Controller
      * @var OsRepository
      */
     private $repository;
+    /**
+     * @var OsService
+     */
+    private $service;
 
-    public function __construct(OsRepository $repository)
+    public function __construct(OsRepository $repository, OsService $service)
     {
         $this->repository = $repository;
+        $this->service = $service;
     }
 
     /**
@@ -37,7 +42,7 @@ class OsController extends Controller
      */
     public function store(Request $request)
     {
-        return $this->repository->create($request->all());
+        return $this->service->create($request->all());
     }
 
     /**
@@ -60,7 +65,7 @@ class OsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        if ($this->repository->update($request->all(), $id)) {
+        if ($this->service->update($request->all(), $id)) {
             return response('1', 200);
         } else {
             return response('', 400);
@@ -75,6 +80,10 @@ class OsController extends Controller
      */
     public function destroy($id)
     {
-        return $this->repository->delete($id);
+        if ($this->repository->delete($id)) {
+            return response('1', 200);
+        } else {
+            return response('', 400);
+        }
     }
 }

@@ -179,4 +179,9 @@ abstract class BaseRepository {
 
 		return $query->delete($id);
 	}
+
+	public function getModel()
+	{
+		return app($this->modelClass);
+	}
 }

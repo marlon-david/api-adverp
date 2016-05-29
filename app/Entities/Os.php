@@ -15,4 +15,9 @@ class Os extends FirebirdModel implements Transformable
 
 	protected $primaryKey = 'CODOS';
 
+	public function cliente()
+	{
+		return $this->belongsTo(Cliente::class, 'CODCLI');
+	}
+
 }

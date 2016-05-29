@@ -21,7 +21,6 @@ class ClienteValidator extends LaravelValidator
 		'CODTIPOPAG' => 'exists:firebird.TIPOSPAG,CODTIPOPAG',
 		'CODNFOPERACAO' => 'exists:firebird.CODNFOPERACAO,CODNFOPERACAO',
 		'CODNFIEDEST' => 'exists:firebird.NFIEDESTINATARIOS,CODNFIEDEST',
-		'CODTIPOPAG' => 'exists:firebird.TIPOSPAG,CODTIPOPAG',
 		'EMAIL' => 'email',
 		'UF' => 'size:2'
 	];

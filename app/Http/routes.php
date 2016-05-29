@@ -21,9 +21,15 @@ Route::post('oauth/access_token', function() {
 
 Route::group(['middleware' => 'oauth'], function() {
 
+	// Estoque dos produtos
 	Route::get('produto/{id}/estoque', 'EstoqueController@index');
 	Route::get('produto/{id}/estoque/{idLoja}', 'EstoqueController@show');
 	Route::match(['patch', 'put'], 'produto/{id}/estoque/{idLoja}', 'EstoqueController@update');
+
+	//Itens dos pedidos
+	Route::get('os/{id}/itens', 'OsItemProController@index');
+	Route::get('os/{id}/itens/{idPro}', 'OsItemProController@show');
+	Route::match(['patch', 'put'], 'os/{id}/itens/{idPro}', 'OsItemProController@update');
 
 	Route::resource('produto', 'ProdutoController', ['except' => ['create', 'edit']]);
 	Route::resource('cliente', 'ClienteController', ['except' => ['create', 'edit']]);
@@ -33,5 +39,7 @@ Route::group(['middleware' => 'oauth'], function() {
 	Route::resource('marca', 'MarcaController', ['except' => ['create', 'edit']]);
 	Route::resource('transportadora', 'TransportadoraController', ['except' => ['create', 'edit']]);
 	Route::resource('vendedor', 'VendedorController', ['except' => ['create', 'edit']]);
+	Route::resource('tipopag', 'TipoPagController', ['except' => ['create', 'edit']]);
+	Route::resource('tiposaida', 'TipoSaidaController', ['except' => ['create', 'edit']]);
 
 });
