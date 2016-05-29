@@ -4,23 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Repositories\ProdutoRepository;
-use App\Services\ProdutoService;
+use App\Repositories\MarcaRepository;
+use App\Services\MarcaService;
 
-class ProdutoController extends Controller
+class MarcaController extends Controller
 {
 
 	/**
-	 * @var ProdutoRepository
+	 * @var MarcaRepository
 	 */
 	private $repository;
 
 	/**
-	 * @var ProdutoService
+	 * @var MarcaService
 	 */
 	private $service;
 
-	public function __construct(ProdutoRepository $repository, ProdutoService $service)
+	public function __construct(MarcaRepository $repository, MarcaService $service)
 	{
 		$this->repository = $repository;
 		$this->service = $service;

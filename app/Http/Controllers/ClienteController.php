@@ -67,7 +67,11 @@ class ClienteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $this->service->update($request->all(), $id);
+        if ($this->service->update($request->all(), $id)) {
+            return response('1', 200);
+        } else {
+            return response('', 400);
+        }
     }
 
     /**
@@ -78,6 +82,10 @@ class ClienteController extends Controller
      */
     public function destroy($id)
     {
-        return $this->repository->delete($id);
+        if ($this->repository->delete($id)) {
+            return response('1', 200);
+        } else {
+            return response('', 400);
+        }
     }
 }

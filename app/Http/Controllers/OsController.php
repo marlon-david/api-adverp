@@ -60,7 +60,11 @@ class OsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $this->repository->update($request->all(), $id);
+        if ($this->repository->update($request->all(), $id)) {
+            return response('1', 200);
+        } else {
+            return response('', 400);
+        }
     }
 
     /**

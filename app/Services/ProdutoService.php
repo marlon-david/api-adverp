@@ -4,9 +4,8 @@ namespace App\Services;
 
 use App\Validators\ProdutoValidator;
 use App\Repositories\ProdutoRepository;
-use Prettus\Validator\Exceptions\ValidatorException;
 
-class ProdutoService
+class ProdutoService extends AbstractService
 {
 	/**
 	 * @var ProdutoRepository
@@ -24,29 +23,4 @@ class ProdutoService
 		$this->validator = $validator;
 	}
 
-	public function create(array $data)
-	{
-		try {
-			$this->validator->with($data)->passesOrFail();
-			return $this->repository->create($data);
-		} catch (ValidatorException $e) {
-			return response([
-				'error' => true,
-				'message' => $e->getMessageBag()
-			], 400);
-		}
-	}
-
-	public function update(array $data, $id)
-	{
-		try {
-			$this->validator->with($data)->passesOrFail();
-			return $this->repository->update($data, $id);
-		} catch (ValidatorException $e) {
-			return response([
-				'error' => true,
-				'message' => $e->getMessageBag()
-			], 400);
-		}
-	}
 }

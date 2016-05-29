@@ -91,6 +91,17 @@ abstract class BaseRepository {
 		return $this->newQuery()->find($id);
 	}
 
+	/**
+	 */
+	public function findWhere($where)
+	{
+		$query = $this->newQuery();
+
+		$query->where($where);
+
+		return $query->get();
+	}
+
 	public function create(array $values)
 	{
 		return $this->insertGetId($values);
@@ -137,6 +148,8 @@ abstract class BaseRepository {
 			}
 		}
 
+		$model = app($this->modelClass);
+
 		$sql = $grammar->compileInsert($query->getQuery(), $values);
 
 		$sql .= ' returning ' . app($this->modelClass)->getKeyName();
@@ -148,7 +161,12 @@ abstract class BaseRepository {
 	{
 		$query = $this->newQuery();
 
-		$query->where(app($this->modelClass)->getKeyName(), '=', $id);
+		$model = app($this->modelClass);
+
+		if (is_array($id))
+			$query->where($id);
+		else
+			$query->where($model->getKeyName(), '=', $id);
 
 		return $query->update($values);
 	}
