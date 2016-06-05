@@ -42,9 +42,12 @@ class OsItemProController extends Controller
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
 	 */
-	public function store(Request $request)
+	public function store(Request $request, $codOs)
 	{
-		return $this->service->create($request->all());
+		$data = $request->all();
+		$data['CODOS'] = $codOs;
+
+		return $this->service->create($data);
 	}
 
 	/**

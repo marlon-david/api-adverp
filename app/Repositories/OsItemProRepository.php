@@ -16,4 +16,12 @@ class OsItemProRepository extends BaseRepository
 	 */
 	protected $modelClass = OsItemPro::class;
 
+	public function create(array $values)
+	{
+		$query = $this->newQuery();
+
+		$query->insert($values);
+
+		return $this->findWhere(['CODOS' => $values['CODOS'], 'CODPRO' => $values['CODPRO']]);
+	}
 }

@@ -20,4 +20,9 @@ class Os extends FirebirdModel implements Transformable
 		return $this->belongsTo(Cliente::class, 'CODCLI');
 	}
 
+	public function itensPro()
+	{
+		return $this->hasMany(OsItemPro::class, 'CODOS', 'CODOS');
+	}
+
 }
