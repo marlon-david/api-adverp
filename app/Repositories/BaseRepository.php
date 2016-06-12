@@ -175,7 +175,10 @@ abstract class BaseRepository {
 	{
 		$query = $this->newQuery();
 
-		$query->where(app($this->modelClass)->getKeyName(), '=', $id);
+		if (is_array($id))
+			$query->where($id);
+		else
+			$query->where(app($this->modelClass)->getKeyName(), '=', $id);
 
 		return $query->delete($id);
 	}

@@ -70,4 +70,22 @@ class OsItemProService extends AbstractService
 		}
 	}
 
+	public function update(array $data, $id)
+	{
+		try {
+			if (is_array($id)) {
+				$newData = array_merge($data, $id);
+			}
+
+			$this->validator->with($newData)->passesOrFail();
+
+			return $this->repository->update($data, $id);
+		} catch (ValidatorException $e) {
+			return response([
+				'error' => true,
+				'message' => $e->getMessageBag()
+			], 400);
+		}
+	}
+
 }

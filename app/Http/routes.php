@@ -31,6 +31,7 @@ Route::group(['middleware' => 'oauth'], function() {
 	Route::post('os/{id}/itens', 'OsItemProController@store');
 	Route::get('os/{id}/itens/{idPro}', 'OsItemProController@show');
 	Route::match(['patch', 'put'], 'os/{id}/itens/{idPro}', 'OsItemProController@update');
+	Route::delete('os/{id}/itens/{idPro}', 'OsItemProController@destroy');
 
 	Route::resource('produto', 'ProdutoController', ['except' => ['create', 'edit']]);
 	Route::resource('cliente', 'ClienteController', ['except' => ['create', 'edit']]);

@@ -68,12 +68,13 @@ class OsItemProController extends Controller
 	 * Update the specified resource in storage.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
-	 * @param  int  $id
+	 * @param  int  $codOs
+	 * @param  int  $codPro
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, $id)
+	public function update(Request $request, $codOs, $codPro)
 	{
-		if ($this->service->update($request->all(), $id)) {
+		if ($this->service->update($request->all(), ['CODOS' => $codOs, 'CODPRO' => $codPro])) {
 			return response('1', 200);
 		} else {
 			return response('', 400);
@@ -83,12 +84,13 @@ class OsItemProController extends Controller
 	/**
 	 * Remove the specified resource from storage.
 	 *
-	 * @param  int  $id
+	 * @param  int  $codOs
+	 * @param  int  $codPro
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id)
+	public function destroy($codOs, $codPro)
 	{
-		if ($this->repository->delete($id)) {
+		if ($this->repository->delete(['CODOS' => $codOs, 'CODPRO' => $codPro])) {
 			return response('1', 200);
 		} else {
 			return response('', 400);
