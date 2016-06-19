@@ -25,4 +25,8 @@ class ClienteValidator extends LaravelValidator
 		'UF' => 'size:2'
 	];
 
+	protected $attributes = [
+		'EMAIL' => 'E-mail'
+	];
+
 }
