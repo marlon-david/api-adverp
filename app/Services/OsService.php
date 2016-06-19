@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Entities\Cliente;
 use App\Validators\OsValidator;
 use App\Repositories\OsRepository;
+use Prettus\Validator\Contracts\ValidatorInterface;
 
 class OsService extends AbstractService
 {
@@ -33,7 +34,7 @@ class OsService extends AbstractService
 	public function create(array $data)
 	{
 		try {
-			$this->validator->with($data)->passesOrFail();
+			$this->validator->with($data)->passesOrFail(ValidatorInterface::RULE_CREATE);
 
 			if ($this->timestamps) {
 				$data['DATACRIA'] = date( 'Y-m-d H:i:s' );

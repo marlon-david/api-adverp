@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 
 abstract class AbstractService {
@@ -18,7 +19,7 @@ abstract class AbstractService {
 	public function create(array $data)
 	{
 		try {
-			$this->validator->with($data)->passesOrFail();
+			$this->validator->with($data)->passesOrFail(ValidatorInterface::RULE_CREATE);
 
 			if ($this->timestamps) {
 				$data['DATACRIA'] = date( 'Y-m-d H:i:s' );
@@ -37,7 +38,7 @@ abstract class AbstractService {
 	public function update(array $data, $id)
 	{
 		try {
-			$this->validator->with($data)->passesOrFail();
+			$this->validator->with($data)->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
 			if ($this->timestamps) {
 				$data['DATAALT'] = date( 'Y-m-d H:i:s' );

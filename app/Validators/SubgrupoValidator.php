@@ -8,7 +8,10 @@ use \Prettus\Validator\LaravelValidator;
 class SubgrupoValidator extends LaravelValidator {
 
     protected $rules = [
-        'CODGRU' => 'required|exists:firebird.GRUPOS,CODGRU'
+		ValidatorInterface::RULE_CREATE => [
+        	'CODGRU' => 'required|exists:firebird.GRUPOS,CODGRU'
+        ],
+		ValidatorInterface::RULE_UPDATE => []
    ];
 
 }

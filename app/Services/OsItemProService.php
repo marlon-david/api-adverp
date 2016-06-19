@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Entities\Os;
 use App\Validators\OsItemProValidator;
 use App\Repositories\OsItemProRepository;
+use Prettus\Validator\Contracts\ValidatorInterface;
 
 class OsItemProService extends AbstractService
 {
@@ -35,7 +36,7 @@ class OsItemProService extends AbstractService
 	public function create(array $data)
 	{
 		try {
-			$this->validator->with($data)->passesOrFail();
+			$this->validator->with($data)->passesOrFail(ValidatorInterface::RULE_CREATE);
 
 			// Regras de negócio para itens da venda
 			if (isset($data['CODOS'])) {
@@ -77,7 +78,7 @@ class OsItemProService extends AbstractService
 				$newData = array_merge($data, $id);
 			}
 
-			$this->validator->with($newData)->passesOrFail();
+			$this->validator->with($newData)->passesOrFail(ValidatorInterface::RULE_UPDATE);
 
 			return $this->repository->update($data, $id);
 		} catch (ValidatorException $e) {
