@@ -2,6 +2,7 @@
 
 namespace App\Validators;
 
+use \Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\LaravelValidator;
 
 class ProdutoValidator extends LaravelValidator
@@ -17,7 +18,8 @@ class ProdutoValidator extends LaravelValidator
 			'CODTIPOPRODUTO' => 'exists:firebird.TIPOPRODUTO,CODTIPOPRODUTO',
 			'CODUN' => 'exists:firebird.UNIDADES,CODUN',
 			'CODUNCONVERSAO' => 'exists:firebird.UNIDADES,CODUN',
-			'CODPRODORIGEM' => 'exists:firebird.PRODORIGENS,CODPRODORIGEM'
+			'CODPRODORIGEM' => 'exists:firebird.PRODORIGENS,CODPRODORIGEM',
+			'DESCRICAO' => 'required'
 		],
 		ValidatorInterface::RULE_UPDATE => [
 			'CODGRU' => 'exists:firebird.GRUPOS,CODGRU',
@@ -28,9 +30,19 @@ class ProdutoValidator extends LaravelValidator
 			'CODTIPOPRODUTO' => 'exists:firebird.TIPOPRODUTO,CODTIPOPRODUTO',
 			'CODUN' => 'exists:firebird.UNIDADES,CODUN',
 			'CODUNCONVERSAO' => 'exists:firebird.UNIDADES,CODUN',
-			'CODPRODORIGEM' => 'exists:firebird.PRODORIGENS,CODPRODORIGEM',
-			'DESCRICAO' => 'required'
+			'CODPRODORIGEM' => 'exists:firebird.PRODORIGENS,CODPRODORIGEM'
 		]
+	];
+
+	protected $attributes = [
+		'CODGRU' => 'Código do Grupo',
+		'CODSUBGRU' => 'Código do Subgrupo',
+		'CODMAR' => 'Código de Marca',
+		'CODTIPOPRODUTO' => 'Código do Tipo do Produto',
+		'CODUN' => 'Código de Unidade',
+		'CODUNCONVERSAO' => 'Código de Unidade Conversão',
+		'CODPRODORIGEM' => 'Código de Origem',
+		'DESCRICAO' => 'Descrição'
 	];
 
 }
