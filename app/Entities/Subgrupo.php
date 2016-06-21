@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Subgrupo extends FirebirdModel implements Transformable
+class Subgrupo extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSUBGRUPOS', 'CODGRU', 'SITE', 'FOTONOME', 'SUBGRUPO', 'FOTOCAMINHO', 'CADINATIVO', 'CODIMPORT'];
 

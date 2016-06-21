@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Cliente extends FirebirdModel implements Transformable
+class Cliente extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXCLIENTES', 'OBS', 'OBSVND', 'DATACAD', 'LIMITECREDPRAZO', 'FSALARIO', 'SENHA', 'CODTRA', 'CODVND', 'CODUSUALT', 'CODUSUCRIA',
 	'DATAALT', 'DATACRIA', 'UF', 'UF_ENT', 'FAG', 'CIDADE', 'BAIRRO', 'MALADIR',

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Entatucustolog extends FirebirdModel implements Transformable
+class Entatucustolog extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXENTATUCUSTOLOG', 'CODENT', 'CODUSU', 'QTDEOLD', 'QTDECOMPRA', 'CODPRO', 'DATA', 'CUSTOOLD', 'CUSTONEW', 'PRECOTABOLD', 'PRECOTABNEW', 'CUSTOCOMPRA'];
 

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class StatusItem extends FirebirdModel implements Transformable
+class StatusItem extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSTATUSITEM', 'CODUSUALT', 'CODUSUCRIA', 'DATAALT', 'DATACRIA', 'DESCRICAO'];
 

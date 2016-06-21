@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Sql extends FirebirdModel implements Transformable
+class Sql extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSQL', 'COMANDO', 'NOMESQL', 'DATAVIEW', 'OBS', 'CODREL', 'CODWHERE', 'ATIVO', 'ORDENADO', 'REPLKEY'];
 

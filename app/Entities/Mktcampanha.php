@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Mktcampanha extends FirebirdModel implements Transformable
+class Mktcampanha extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXMKTCAMPANHAS', 'EMAILCONTEUDO', 'DATA', 'CODUSUALT', 'CODUSUCRIA', 'DATAALT', 'DATACRIA', 'CAMPANHA', 'EMAILASSUNTO', 'EMAILARQCONTEUDO'];
 

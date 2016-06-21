@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Sqlcomando extends FirebirdModel implements Transformable
+class Sqlcomando extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSQLCOMANDOS', 'CODSQLCOMANDO', 'SQL', 'DESCRICAO'];
 

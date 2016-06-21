@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Sysvalidanfse extends FirebirdModel implements Transformable
+class Sysvalidanfse extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['TAMMAX', 'DESCRICAO', 'OBJETO', 'MSGRETORNO', 'ISOBRIGATORIO', 'AUXCODSYS', 'TAG', 'TIPO', 'AUXTIPO'];
 

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Lojasmeta extends FirebirdModel implements Transformable
+class Lojasmeta extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXLOJASMETAS', 'CODLOJA', 'ANO', 'MES', 'TIPOMETA', 'METATOT1', 'METATOT2', 'ESTIMATIVA1', 'ESTIMATIVA2'];
 

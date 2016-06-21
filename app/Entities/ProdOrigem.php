@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class ProdOrigem extends FirebirdModel implements Transformable
+class ProdOrigem extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['DESCRICAO', 'CODAUXORIGEM', 'CODORIGEMNFE'];
 

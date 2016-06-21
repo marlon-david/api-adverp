@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Condutor extends FirebirdModel implements Transformable
+class Condutor extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['NOME', 'CPF', 'CADINATIVO', 'AUXCONDUTORES', 'CODUSUALT', 'CODUSUCRIA', 'DATACRIA', 'DATAALT'];
 

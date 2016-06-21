@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Relsmodulo extends FirebirdModel implements Transformable
+class Relsmodulo extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXRELSMODULOS', 'MODULO', 'REPLKEY'];
 

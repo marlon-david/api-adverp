@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class ProdutoForn extends FirebirdModel implements Transformable
+class ProdutoForn extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPRODUTOSFORN', 'CODFOR'];
 

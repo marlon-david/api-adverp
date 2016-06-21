@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Combustivel extends FirebirdModel implements Transformable
+class Combustivel extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXCOMBUSTIVEIS', 'COMBUSTIVEL'];
 

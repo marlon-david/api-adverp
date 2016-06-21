@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Mes extends FirebirdModel implements Transformable
+class Mes extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXMESES', 'DESCABREVIADA', 'DESCRICAO'];
 

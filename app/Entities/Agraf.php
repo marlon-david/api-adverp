@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Agraf extends FirebirdModel implements Transformable
+class Agraf extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXAGRAF', 'CODGRAFO', 'CODGRAFDEST', 'DESCRIGRAFO', 'DESCRIGRAFDEST', 'REPLKEY'];
 

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Prosertotdia extends FirebirdModel implements Transformable
+class Prosertotdia extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPROSERTOTDIA', 'DIA', 'ANO', 'MES', 'CODGRU', 'CODMAR', 'PROSER', 'CODPROSER', 'DIASEMANA', 'CODSUBGRU', 'CODPROSERTOTDIA', 'CUSTO', 'FATBRUTO', 'DESCONTO', 'CODLOJAI', 'FATLIQUIDO', 'MBC'];
 

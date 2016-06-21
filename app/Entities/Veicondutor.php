@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Veicondutor extends FirebirdModel implements Transformable
+class Veicondutor extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CODCONDUTOR'];
 

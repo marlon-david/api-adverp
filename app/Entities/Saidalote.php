@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Saidalote extends FirebirdModel implements Transformable
+class Saidalote extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSAIDALOTES', 'CODPRO', 'QTDE', 'TIPO', 'CODFOR', 'CODSAI', 'NUMITEM', 'CODLOTE', 'CODLOJAI', 'VALIDADE', 'DATACRIA', 'FABRICACAO'];
 

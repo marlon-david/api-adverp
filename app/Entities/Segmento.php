@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Segmento extends FirebirdModel implements Transformable
+class Segmento extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSEGMENTOS', 'EMAILCONTEUDO', 'CODCAMP', 'CODUSUALT', 'CODUSUCRIA', 'DATAALT', 'DATACRIA', 'SEGMENTO', 'EMAILASSUNTO', 'EMAILARQCONTEUDO'];
 

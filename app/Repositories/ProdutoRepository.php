@@ -3,7 +3,6 @@
 namespace App\Repositories;
 
 use App\Entities\Produto;
-use App\Validators\ProdutoRepositoryValidator;
 
 /**
  * Class ProdutoRepository

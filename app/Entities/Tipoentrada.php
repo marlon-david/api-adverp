@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Tipoentrada extends FirebirdModel implements Transformable
+class Tipoentrada extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXTIPOENTRADAS', 'CODUSUALT', 'CODUSUCRIA', 'NAOATUCUSTO', 'QTDENEGATIVA', 'REAJUSTECUSTOORGPUBL', 'DATAALT', 'DATACRIA', 'TIPOENTRADA', 'NAOALTERAESTOQUE', 'NAOGERAFINAN', 'ISIMPORTACAO', 'CADINATIVO', 'ISTRIBUTAVEL', 'CST', 'OBSNF', 'ZERAIPI', 'ZERAICMS', 'ALTESTFISICO', 'ABREV', 'CODTIPONF'];
 

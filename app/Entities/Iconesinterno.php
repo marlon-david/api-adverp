@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Iconesinterno extends FirebirdModel implements Transformable
+class Iconesinterno extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXICONESINTERNOS', 'EVENTOMENU', 'DESCRICAO', 'ICONEPADRAO'];
 

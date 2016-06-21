@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Nftotalizaserv extends FirebirdModel implements Transformable
+class Nftotalizaserv extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXNFTOTALIZA', 'COD', 'NOME', 'CAMPOOS', 'CAMPOITEM1', 'CAMPOITEM2', 'CAMPOITEM3', 'CAMPOITEM4'];
 

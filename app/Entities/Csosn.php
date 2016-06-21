@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Csosn extends FirebirdModel implements Transformable
+class Csosn extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CSOSN', 'CSOSNAUX'];
 

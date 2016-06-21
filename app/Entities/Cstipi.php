@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Cstipi extends FirebirdModel implements Transformable
+class Cstipi extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CST', 'DESCRICAO'];
 

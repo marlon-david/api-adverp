@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Nftiposervico extends FirebirdModel implements Transformable
+class Nftiposervico extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXNFTIPOSERVICO', 'CODUSU', 'CODUSUALT', 'CODUSUCRIA', 'DATAALT', 'DATACRIA', 'UN', 'DESCRICAO', 'ALIQISS', 'ALIQNAC', 'ALIQIMP', 'CODTIPOTRIBUT', 'CODTRIBMUN'];
 

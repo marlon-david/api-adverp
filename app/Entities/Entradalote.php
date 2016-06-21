@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Entradalote extends FirebirdModel implements Transformable
+class Entradalote extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXENTRADALOTES', 'CODFOR', 'VALIDADE', 'CODLOJAI', 'CODPRO', 'QTDE', 'CODENT', 'NUMITEM', 'CODLOTE', 'FABRICACAO'];
 

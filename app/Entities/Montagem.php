@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Montagem extends FirebirdModel implements Transformable
+class Montagem extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXMONTAGENS', 'CODLOJA', 'OBS', 'DATA', 'PREVISAO', 'NUMMON', 'CODUSUALT', 'CODUSUCRIA', 'DATAALT', 'DATACRIA', 'MONTAGEMORICODMON', 'MONTAGEMORINUMITEM', 'MONTAGEMORINUMITEMMP', 'NUMAUXVENDA'];
 

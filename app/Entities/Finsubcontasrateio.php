@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Finsubcontasrateio extends FirebirdModel implements Transformable
+class Finsubcontasrateio extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXFINSUBCONTASRATEIO', 'CODFINSUBCON', 'CODSUBCON', 'PCTRATEIO', 'CODCTR'];
 

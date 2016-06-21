@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Systela extends FirebirdModel implements Transformable
+class Systela extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSYSTELA', 'WIDTH', 'HEIGHT', 'DINAMICA', 'CODTIPOTELA', 'ISNOTUSADA', 'CLASSE', 'TITULO', 'REPLKEY', 'CADINATIVO'];
 

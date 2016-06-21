@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Syscomponente extends FirebirdModel implements Transformable
+class Syscomponente extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSYSCOMPONENTES', 'TOP', 'WIDTH', 'HEIGHT', 'CODTELA', 'CODCAMPO', 'TABORDER', 'COMPLEFT', 'CODTELALAY', 'CODTIPOCOMP', 'TIPOCOMPONENTE_CODTIPOCOMP', 'VISIBLE', 'NOME'];
 

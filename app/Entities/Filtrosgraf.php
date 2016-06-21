@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Filtrosgraf extends FirebirdModel implements Transformable
+class Filtrosgraf extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXFILTROSGRAF', 'CODGRAF', 'DIAFIN', 'ANOFIN', 'MESFIN', 'DIAINI', 'ANOINI', 'MESINI', 'TIPOLK', 'CODLOJA', 'ISOBRIGADO', 'LABEL', 'CAMPO', 'TABELA', 'CAMPOCHAVE', 'REPLKEY'];
 

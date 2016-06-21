@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class ProdTabela extends FirebirdModel implements Transformable
+class ProdTabela extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPRODTABELAS', 'DESCRICAO'];
 

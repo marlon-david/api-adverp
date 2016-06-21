@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Tipossolicitacao extends FirebirdModel implements Transformable
+class Tipossolicitacao extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['SOLICITACAO', 'ISPEDEAUTORIZACAO', 'AUTORIZACAO', 'ISPEDEHOMOLOGACAO', 'HOMOLOGACAO', 'ISSEMPREPAGO', 'ISCLIENTEESCOLHE', 'PLANO', 'PRAZO', 'CADINATIVO', 'DATAALT', 'DATACRIA', 'CODUSUALT', 'CODUSUCRIA', 'OBS'];
 

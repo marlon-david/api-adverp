@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Syslc extends FirebirdModel implements Transformable
+class Syslc extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSYSLCS', 'NLCS'];
 

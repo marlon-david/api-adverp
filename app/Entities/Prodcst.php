@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Prodcst extends FirebirdModel implements Transformable
+class Prodcst extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPRODCST', 'CODCST', 'CST', 'CSTAUX'];
 

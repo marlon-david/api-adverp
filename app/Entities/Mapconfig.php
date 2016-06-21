@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Mapconfig extends FirebirdModel implements Transformable
+class Mapconfig extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXMAPCONFIG', 'CODMAPCONFIG', 'HTMLINI', 'HTMLFIN'];
 

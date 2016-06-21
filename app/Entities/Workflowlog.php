@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Workflowlog extends FirebirdModel implements Transformable
+class Workflowlog extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXWORKFLOWLOG', 'DATAUTILIZACAO', 'CODIGO', 'CODCLIADV', 'CODUSUUTILIZA'];
 

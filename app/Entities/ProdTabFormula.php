@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class ProdTabFormula extends FirebirdModel implements Transformable
+class ProdTabFormula extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPRODTABSFORMULAS', 'LITERALFORMULA', 'TIPOFORM', 'CODCAMPO', 'FORMULA'];
 

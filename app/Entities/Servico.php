@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Servico extends FirebirdModel implements Transformable
+class Servico extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSERVICOS', 'CODGRU', 'TROCAKM', 'TROCAMES', 'CODSUBGRU', 'CODUSUALT', 'CODUSUCRIA', 'CODTIPOSERV', 'DATAALT', 'DATACRIA', 'UN', 'CODIGO', 'DESCRICAO', 'COMISSAO', 'COMISSAOTEC', 'QTDEPARAVND', 'CUSTO', 'PRECOVENDA', 'PRECOMINIMO', 'MARGEM', 'MARGEMMIN', 'ISS', 'COMISSAOVLR', 'APLICACAO', 'CADINATIVO', 'ISSQN', 'CODTIPOTRIBUT'];
 

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Nfiedestinatario extends FirebirdModel implements Transformable
+class Nfiedestinatario extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['DESCRICAO'];
 

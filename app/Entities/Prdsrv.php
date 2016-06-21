@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Prdsrv extends FirebirdModel implements Transformable
+class Prdsrv extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPRDSRV', 'COPIA', 'COD1', 'COD2', 'TIPO1', 'TIPO2'];
 

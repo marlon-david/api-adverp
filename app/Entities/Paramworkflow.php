@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Paramworkflow extends FirebirdModel implements Transformable
+class Paramworkflow extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPARAMWORKFLOW', 'VALOR', 'CODPARAM', 'CODWORK', 'TITULO', 'CHAVE'];
 

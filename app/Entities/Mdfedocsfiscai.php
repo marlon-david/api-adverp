@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Mdfedocsfiscai extends FirebirdModel implements Transformable
+class Mdfedocsfiscai extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CODNF'];
 

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Montadora extends FirebirdModel implements Transformable
+class Montadora extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXMONTADORAS', 'CODUSUALT', 'CODUSUCRIA', 'DATAALT', 'DATACRIA', 'MONTADORA'];
 

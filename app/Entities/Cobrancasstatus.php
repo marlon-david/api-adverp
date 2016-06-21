@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Cobrancasstatus extends FirebirdModel implements Transformable
+class Cobrancasstatus extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['STATUSCOB', 'CODUSUALT', 'CODUSUCRIA', 'DATAALT', 'DATACRIA', 'CADINATIVO'];
 

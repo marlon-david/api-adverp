@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Nfmensagen extends FirebirdModel implements Transformable
+class Nfmensagen extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CODMENSAGEM', 'MENSAGEM'];
 

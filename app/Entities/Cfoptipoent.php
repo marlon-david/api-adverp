@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Cfoptipoent extends FirebirdModel implements Transformable
+class Cfoptipoent extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXCFOPTIPOENT', 'CODSITTRIB', 'CODTIPOENT', 'CODCFOPFORA', 'CODCFOPESTADO', 'CODCFOPTIPOENT', 'CODCSTESTADO', 'CODCSOSNESTADO', 'CODCSTIPI', 'CODCSTPIS', 'CODCSTCOFINS', 'ALIQPIS', 'ALIQCOFINS', 'CODLOJA'];
 

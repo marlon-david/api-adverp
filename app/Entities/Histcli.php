@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Histcli extends FirebirdModel implements Transformable
+class Histcli extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXHISTCLI', 'OBS', 'DATA', 'DTLIQ', 'CODCLI', 'CODUSUCRIA', 'CODTIPOCONTATO', 'CODCOBRANCA', 'OBSMENOR'];
 

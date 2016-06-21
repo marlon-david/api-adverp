@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Servcomifaixa extends FirebirdModel implements Transformable
+class Servcomifaixa extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSERVCOMIFAIXAS', 'CODSER', 'NUMFAIXA', 'PCTFIN', 'PCTINI', 'COMISSAO', 'VLRFIN', 'VLRINI'];
 

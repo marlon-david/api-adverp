@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Chamadocomando extends FirebirdModel implements Transformable
+class Chamadocomando extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CODCHAMADO', 'CODCLI', 'COMANDO', 'LABEL', 'ISIMPORTADO', 'DTEXECUCAO'];
 

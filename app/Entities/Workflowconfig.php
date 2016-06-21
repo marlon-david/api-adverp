@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Workflowconfig extends FirebirdModel implements Transformable
+class Workflowconfig extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXWORKFLOWCONFIG', 'CODCONFIG', 'CODUSUMANDAEMAIL', 'CREDITOSMENSAGEM', 'ENVIAADVMONITOR', 'ISPROMOCIONAL', 'ENVIAGDATA'];
 

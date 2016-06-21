@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Tiponf extends FirebirdModel implements Transformable
+class Tiponf extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['TIPONF'];
 

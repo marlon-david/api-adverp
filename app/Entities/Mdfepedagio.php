@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Mdfepedagio extends FirebirdModel implements Transformable
+class Mdfepedagio extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CNPJFORN', 'CNPJPG', 'NCOMPRA', 'CODMDFE'];
 

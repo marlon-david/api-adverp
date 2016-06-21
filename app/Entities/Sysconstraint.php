@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Sysconstraint extends FirebirdModel implements Transformable
+class Sysconstraint extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXSYSCONSTRAINT', 'COMANDO', 'VMIN', 'VMAX', 'CODTAB', 'CODCAMPO', 'CODTABFK', 'CODUSUALT', 'CODCAMPOFK', 'CODUSUCRIA', 'CODCAMPOMOSTRAFK', 'PRIEST', 'ISUPCASC', 'ISDELCASC', 'DATAALT', 'DATACRIA', 'NOME', 'REPLKEY'];
 

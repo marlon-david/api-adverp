@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Ositensser extends FirebirdModel implements Transformable
+class Ositensser extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXOSITENSSER', 'NUMITEM', 'OBSLONGA', 'REVHISTORICO', 'REVENVMENSCEL', 'REVRESOLVIDO', 'ORDEM', 'CODSER', 'CODTEC', 'CODVND', 'CODOSORC', 'NUMITEMORC', 'GARANTIA', 'COMISSAO', 'QTDE', 'CUSTO', 'UNITARIO', 'DESCONTO', 'DESCONTOPCT', 'PCTDESCDILUIDO', 'ISCOMIESP', 'TEMPOGASTO', 'AUXCODOSSER', 'PRECOBASE', 'UNITCOMDESC', 'TOTALSRV', 'UNITCOMDESCDILUIDO', 'TOTALCOMDESC', 'BASECALCISS', 'VLRISS', 'ALIQISS', 'VLRPISNFSE', 'VLRCOFINSNFSE', 'VLRCSLLNFSE', 'VLRINSSNFSE', 'VLRIRNFSE'];
 

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Parcpagcancelada extends FirebirdModel implements Transformable
+class Parcpagcancelada extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPARCPAGCANCELADAS', 'CODPAR', 'CODPAGAM'];
 

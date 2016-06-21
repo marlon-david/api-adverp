@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class ParcelaTipoPagStatus extends FirebirdModel implements Transformable
+class ParcelaTipoPagStatus extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPARCELASTIPOPAGSTATUS', 'PARTIPOSTATUS'];
 

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Inicializacoe extends FirebirdModel implements Transformable
+class Inicializacoe extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXINICIALIZACOES', 'CODUSU', 'DATA', 'HELPDESK'];
 

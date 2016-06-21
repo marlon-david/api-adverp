@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Montagensstatussitem extends FirebirdModel implements Transformable
+class Montagensstatussitem extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXMONTAGENSSTATUSITEM', 'STATUS'];
 

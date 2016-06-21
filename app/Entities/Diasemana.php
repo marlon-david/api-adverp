@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Diasemana extends FirebirdModel implements Transformable
+class Diasemana extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXDIASEMANA', 'DIAABREVIADO', 'DIASEMANA'];
 

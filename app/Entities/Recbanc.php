@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Recbanc extends FirebirdModel implements Transformable
+class Recbanc extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXRECBANC', 'CODBAN', 'CODTIPO', 'DATA', 'PAGREC', 'VALOR', 'DESCRICAO', 'NUMDOC'];
 

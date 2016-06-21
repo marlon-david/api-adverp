@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Cstpiscofin extends FirebirdModel implements Transformable
+class Cstpiscofin extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CST', 'DESCRICAO'];
 

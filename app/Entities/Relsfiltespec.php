@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Relsfiltespec extends FirebirdModel implements Transformable
+class Relsfiltespec extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['CODREL', 'FILTRO'];
 

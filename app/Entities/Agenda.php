@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Agenda extends FirebirdModel implements Transformable
+class Agenda extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXAGENDA', 'HORA', 'DIA', 'CODUSUALT', 'CODUSUCRIA', 'DATAALT', 'DATACRIA', 'CLIENTE', 'FONE', 'DESCRICAO'];
 

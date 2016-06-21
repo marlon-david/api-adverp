@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Inventario extends FirebirdModel implements Transformable
+class Inventario extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['NUMCONF', 'DATA', 'OBS', 'QTDECONF', 'CODENT'];
 

@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Pais extends FirebirdModel implements Transformable
+class Pais extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPAISES', 'PAIS', 'CODBACEN'];
 

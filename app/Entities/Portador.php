@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Portador extends FirebirdModel implements Transformable
+class Portador extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPORTADORES', 'CADINATIVO', 'DATACRIA', 'CODUSUALT', 'CODUSUCRIA', 'PORTADOR', 'DATAALT'];
 

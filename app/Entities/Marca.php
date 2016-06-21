@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Marca extends FirebirdModel implements Transformable
+class Marca extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXMARCAS', 'CODUSUALT', 'CODUSUCRIA', 'SITE', 'DATAALT', 'DATACRIA', 'FOTONOME', 'MARCA', 'FOTOCAMINHO', 'CADINATIVO', 'CODIMPORT'];
 

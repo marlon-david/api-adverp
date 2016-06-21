@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Prodcomifaixa extends FirebirdModel implements Transformable
+class Prodcomifaixa extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXPRODCOMIFAIXAS', 'CODPRO', 'NUMFAIXA', 'PCTFIN', 'PCTINI', 'COMISSAO'];
 

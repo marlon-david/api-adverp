@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class TransfIten extends FirebirdModel implements Transformable
+class TransfIten extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXTRANSFITENS', 'NUMITEM', 'OBS', 'CODPRO', 'CODLOJAENTI', 'CODLOJASAII', 'TIPOI', 'BAIXASOLENVI', 'UNITARIO', 'QTDE', 'TINHANF', 'CODCALC', 'ORDEM'];
 

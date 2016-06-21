@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Forncontato extends FirebirdModel implements Transformable
+class Forncontato extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXFORNCONTATOS', 'CODFOR', 'DTNASC', 'CODDEPART', 'NOME', 'FONE', 'EMAIL', 'OBS'];
 

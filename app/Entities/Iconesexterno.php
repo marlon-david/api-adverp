@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Iconesexterno extends FirebirdModel implements Transformable
+class Iconesexterno extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXICONESEXTERNOS', 'ICONE', 'COMANDO', 'DESCRICAO'];
 

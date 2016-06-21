@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Rave extends FirebirdModel implements Transformable
+class Rave extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXRAVE', 'OBS', 'DATACRIA', 'DATAMODIFICA', 'VERSAO', 'PAISAGEM', 'NOMEREL', 'REPLKEY'];
 

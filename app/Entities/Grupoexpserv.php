@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Grupoexpserv extends FirebirdModel implements Transformable
+class Grupoexpserv extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXGRUPOEXP', 'CODCALC', 'DECISAO', 'CODREGRA', 'DESCRICAO'];
 

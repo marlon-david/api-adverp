@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Gilgrucomando extends FirebirdModel implements Transformable
+class Gilgrucomando extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['DESCRICAO', 'DATACRIA', 'CODUSUCRIA', 'DATAALT', 'CODUSUALT'];
 

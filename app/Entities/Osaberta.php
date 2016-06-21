@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Osaberta extends FirebirdModel implements Transformable
+class Osaberta extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXOSABERTAS', 'CODOS', 'CODUSUEDITANDO'];
 

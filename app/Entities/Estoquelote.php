@@ -2,12 +2,8 @@
 
 namespace App\Entities;
 
-use Prettus\Repository\Contracts\Transformable;
-use Prettus\Repository\Traits\TransformableTrait;
-
-class Estoquelote extends FirebirdModel implements Transformable
+class Estoquelote extends FirebirdModel
 {
-	use TransformableTrait;
 
 	protected $fillable = ['AUXESTOQUELOTES', 'CODPRO', 'CODLOJA', 'CODFOR', 'CODLOTE', 'DATACRIA', 'VALIDADE', 'QTDEESTOQUE', 'FABRICACAO'];
 
