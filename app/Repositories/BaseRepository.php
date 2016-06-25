@@ -38,14 +38,14 @@ abstract class BaseRepository {
 		}
 
 		if (true == $paginate) {
-			return $query->paginate($take);
+			return $query->paginate($take, $this->getSelectable());
 		}
 		
 		if ($take > 0 || false !== $take) {
 			$query->take($take);
 		}
 
-		return $query->get();
+		return $query->get($this->getSelectable());
 	}
 
 	/**
@@ -85,10 +85,15 @@ abstract class BaseRepository {
 	 */
 	public function find($id, $fail = true)
 	{
+		$query = $this->newQuery();
+
+		$query->select($this->getSelectable());
+
 		if ($fail) {
-			return $this->newQuery()->findOrFail($id);
+			return $query->findOrFail($id);
 		}
-		return $this->newQuery()->find($id);
+
+		return $query->find($id);
 	}
 
 	/**
@@ -99,7 +104,7 @@ abstract class BaseRepository {
 
 		$query->where($where);
 
-		return $query->get();
+		return $query->get($this->getSelectable());
 	}
 
 	public function create(array $values)
@@ -186,5 +191,15 @@ abstract class BaseRepository {
 	public function getModel()
 	{
 		return app($this->modelClass);
+	}
+
+	protected function getSelectable()
+	{
+		$model = $this->getModel();
+
+		if (property_exists($model, 'selectable'))
+			return $model->selectable;
+
+		return ['*'];
 	}
 }
