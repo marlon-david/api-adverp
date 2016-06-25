@@ -9,4 +9,6 @@ class OsItemPro extends FirebirdModel
 
 	protected $table = 'OSITENSPRO';
 
+	public $selectable = ['NUMITEM', 'CODOS', 'CODPRO', 'CODVND', 'QTDE', 'UNITARIO'];
+
 }

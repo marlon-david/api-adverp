@@ -11,6 +11,8 @@ class Os extends FirebirdModel
 
 	protected $primaryKey = 'CODOS';
 
+	public $selectable = ['CODOS', 'OS', 'CODCLI', 'CODLOJA'];
+
 	public function cliente()
 	{
 		return $this->belongsTo(Cliente::class, 'CODCLI');
