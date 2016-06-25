@@ -35,4 +35,6 @@ class Produto extends FirebirdModel
 	protected $table = 'PRODUTOS';
 
 	protected $primaryKey = 'CODPRO';
+
+	public $selectable = ['CODPRO', 'DESCRICAO'];
 }

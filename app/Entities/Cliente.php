@@ -31,4 +31,6 @@ class Cliente extends FirebirdModel
 	protected $table = 'CLIENTES';
 
 	protected $primaryKey = 'CODCLI';
+
+	public $selectable = ['CODCLI', 'RAZAO', 'CIDADE', 'UF'];
 }

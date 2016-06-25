@@ -2,7 +2,6 @@
 
 namespace App\Repositories;
 
-use Prettus\Repository\Criteria\RequestCriteria;
 use App\Entities\Cliente;
 use App\Validators\ClienteValidator;
 
@@ -17,13 +16,4 @@ class ClienteRepository extends BaseRepository
      */
     protected $modelClass = Cliente::class;
 
-    
-
-    /**
-     * Boot up the repository, pushing criteria
-     */
-    public function boot()
-    {
-        $this->pushCriteria(app(RequestCriteria::class));
-    }
 }
