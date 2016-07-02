@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use Log;
 use Prettus\Validator\Contracts\ValidatorInterface;
 use Prettus\Validator\Exceptions\ValidatorException;
 
@@ -15,6 +16,17 @@ abstract class AbstractService {
 	 * @var bool
 	 */
 	protected $timestamps = true;
+
+	public function all()
+	{
+		try {
+			$return = $this->repository->all();
+		} catch (\PDOException $e) {
+			$return = response(['error' => true, 'message' => 'Invalid Request'], 500);
+		}
+
+		return $return;
+	}
 
 	public function create(array $data)
 	{
