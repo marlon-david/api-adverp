@@ -2,10 +2,8 @@
 
 namespace App\Entities;
 
-use DB;
-use Config;
 use Illuminate\Database\Eloquent\Model;
-use LucaDegasperi\OAuth2Server\Facades\Authorizer;
+use App\Services\Database\ChangeConnection;
 
 abstract class FirebirdModel extends Model
 {
@@ -18,24 +16,9 @@ abstract class FirebirdModel extends Model
 
 	public $timestamps = false;
 
-	/**
-	* @var User
-	*/
-	protected $user;
-
 	public function __construct()
 	{
-		$userId = Authorizer::getResourceOwnerId();
-		$this->user = User::find($userId);
-
-		Config::set('database.connections.' . $this->connection, [
-			'driver'   => 'firebird',
-			'host'     => $this->user->firebird_host,
-			'database' => $this->user->firebird_database,
-			'username' => $this->user->firebird_username,
-			'password' => $this->user->firebird_password,
-			'charset'  => 'UTF8'
-		]);
+		ChangeConnection::apply($this->connection);
 	}
 
 	/*
