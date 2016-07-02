@@ -37,10 +37,22 @@ abstract class BaseRepository {
 			$query = $this->newQuery();
 		}
 
-		if (true == $paginate) {
-			return $query->paginate($take, $this->getSelectable());
+		$request = app('request');
+
+		$sort = $request->get('sort');
+
+		$appends = [];
+
+		if ($sort) {
+			$appends['sort'] = $sort;
+			$appends['order'] = strtolower($request->get('order')) == 'desc' ? 'desc' : 'asc';
+			$query->orderBy($sort, $appends['order']);
 		}
-		
+
+		if (true == $paginate) {
+			return $query->paginate($take, $this->getSelectable())->appends($appends);
+		}
+
 		if ($take > 0 || false !== $take) {
 			$query->take($take);
 		}
