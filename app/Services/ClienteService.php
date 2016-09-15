@@ -27,7 +27,7 @@ class ClienteService extends AbstractService
 	{
 		try {
 			return $this->repository->find($id)->getAttributes();
-		} catch (Exception $e) {
+		} catch (\Exception $e) {
 			return response([
 				'error' => true,
 				'message' => $e->getMessage()

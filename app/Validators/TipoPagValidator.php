@@ -3,9 +3,8 @@
 namespace App\Validators;
 
 use \Prettus\Validator\Contracts\ValidatorInterface;
-use \Prettus\Validator\LaravelValidator;
 
-class TipoPagValidator extends LaravelValidator {
+class TipoPagValidator extends AbstractValidator {
 
     protected $rules = [
         ValidatorInterface::RULE_CREATE => [],

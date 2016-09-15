@@ -3,9 +3,8 @@
 namespace App\Validators;
 
 use \Prettus\Validator\Contracts\ValidatorInterface;
-use \Prettus\Validator\LaravelValidator;
 
-class ClienteValidator extends LaravelValidator
+class ClienteValidator extends AbstractValidator
 {
 
 	protected $rules = [

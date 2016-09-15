@@ -6,6 +6,7 @@ use App\Entities\Os;
 use App\Validators\OsItemProValidator;
 use App\Repositories\OsItemProRepository;
 use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 class OsItemProService extends AbstractService
 {

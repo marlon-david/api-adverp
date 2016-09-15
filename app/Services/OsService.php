@@ -6,6 +6,7 @@ use App\Entities\Cliente;
 use App\Validators\OsValidator;
 use App\Repositories\OsRepository;
 use Prettus\Validator\Contracts\ValidatorInterface;
+use Prettus\Validator\Exceptions\ValidatorException;
 
 class OsService extends AbstractService
 {
@@ -67,6 +68,11 @@ class OsService extends AbstractService
 			return response([
 				'error' => true,
 				'message' => $e->getMessageBag()
+			], 400);
+		} catch (\Exception $e) {
+			return response([
+				'error' => true,
+				'message' => 'Erro desconhecido'
 			], 400);
 		}
 	}
